@@ -1,12 +1,9 @@
-# Write your code here.
-
 def line(array)
   if array.size == 0
     puts "The line is currently empty."
   else
-    new_array = []
-    array.each do |person|
-      new_array << "#{array.find_index(person) + 1}. #{person}"
+    new_array = array.map do |person|
+      "#{array.find_index(person) + 1}. #{person}"
     end
     puts "The line is currently: #{new_array.join(' ')}"
   end
